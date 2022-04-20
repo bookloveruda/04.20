@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import url(./common/reset.css);
+
+.section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* center니까 중심에서 위 아래로 출렁출렁 촐싹되지만 */
+  /* flex-start로 하면 위에 중심이 잡히고 아래로 찰랑찰랑 움직인다 */
+  align-items: flex-start;
+}
+.section .sec-con{
+  flex: 0 1 400px;
+  border: 1px solid;
+}
+.section .sec-con .menu{
+  background-color: #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.section .sec-con .menu >ul{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.section .sec-con .menu >ul>li{
+  border: 1px solid #f00;
+  background-color: rgba(234, 255, 0, 0.533);
+  line-height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+/* >이거 안 쓰면 ul 밑에 모든 li에 빨간 테두리 들어감.. */
+/* .section .sec-con .menu >ul li{
+  border: 1px solid #f00;
+} */
+.section .sec-con .menu >ul>li ul.sub{
+  border: 2px solid rgb(21, 112, 224);
+  display: none;
+  background-color: rgba(115, 197, 49, 0.91);
+}
+.section .sec-con .menu >ul>li ul.sub>li{}
+/* ul.sub2의 부모인 ul.sub>li */
+.section .sec-con .menu >ul>li ul.sub>li ul.sub2{
+  background-color: rgba(96, 196, 254, 0.919);
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.section .sec-con .menu >ul>li ul.sub>li ul.sub2{}
+.section .sec-con .menu >ul>li ul.sub{}
